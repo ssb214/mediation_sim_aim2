@@ -13,3 +13,10 @@ Simulations were conducted under 36 scenarios for each of three mediator set siz
 - Sample size (n = 200, 500, 1000)
 - Proportion of true mediators (2%, 5%, 10%)
 - Mediator effect size (β = 0.1, 0.3)
+
+# Files 
+*aim2_analysis.R* Code for visualizing and processing the simulation results 
+
+*aim2_parallel.R* Simulation code run on the Cluster 
+
+*batch_parallel_XXX.submit* SUBMIT files for batch code 
