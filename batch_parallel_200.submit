@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --time=05-00:00:00
+#SBATCH --job-name=med_sim_test
+#SBATCH --mem=100
+#SBATCH --partition=week-long-cpu
+#SBATCH --array=1-5
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=ssbucke@emory.edu
+
+module purge
+module load R
+
+Rscript --no-save --no-restore --verbose /projects/emerge/SSHOFFMAN/Aim2/code/aim2_parallel.R 200 ${SLURM_ARRAY_TASK_ID} ${SLURM_CPUS_PER_TASK}
